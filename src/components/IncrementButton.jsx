@@ -1,6 +1,6 @@
 const IncrementButton = (props) => {
     return (
-      <button>Increment</button>
+      <button onClick={props.addOne}>Increment</button>
     );
   };
   
