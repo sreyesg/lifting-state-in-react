@@ -2,7 +2,9 @@
 
 const NewTodo = (props) => {
     const handleSubmit = (event) => {
+      
       event.preventDefault();
+      
       console.log("Creating a new to-do...");
     };
   

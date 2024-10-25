@@ -1,5 +1,4 @@
-// src/App.jsx
-
+import NewTodo from "./components/newTodo";
 const App = () => {
 
   const addTodo = (newTodo) => {
@@ -9,6 +8,7 @@ const App = () => {
   return (
     <>
       <h1>To-do App</h1>
+      <NewTodo addTodo={addTodo} />
     </>
   );
 };
