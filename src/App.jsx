@@ -1,14 +1,26 @@
+import { useState } from "react"; 
 import NewTodo from "./components/newTodo";
+
 const App = () => {
 
+  const [todos, setTodos] = useState([])
+
   const addTodo = (newTodo) => {
-    console.log(newTodo);
+    setTodos([...todos, newTodo]);
+
   };
 
-  return (
+  return ( 
     <>
       <h1>To-do App</h1>
       <NewTodo addTodo={addTodo} />
+      <ul>
+        {
+        todos.map((todo, idx)=>{
+          return(<li key={idx}>{todo}</li>)
+        })
+        }
+      </ul>
     </>
   );
 };
