@@ -1,10 +1,13 @@
-// src/components/NewTodo.jsx
+import { useState } from "react";
 
 const NewTodo = (props) => {
-    const handleSubmit = (event) => {
+
+  const [newTodo, setNewTodo] = useState('')
+
+  const handleSubmit = (event) => {
       
       event.preventDefault();
-      
+      props.addTodo('data crated within newTodo')
       console.log("Creating a new to-do...");
     };
   
