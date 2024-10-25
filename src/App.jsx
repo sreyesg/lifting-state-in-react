@@ -1,5 +1,6 @@
 import { useState } from "react"; 
 import NewTodo from "./components/newTodo";
+import TodoList from "./components/Todolist";
 
 const App = () => {
 
@@ -14,13 +15,7 @@ const App = () => {
     <>
       <h1>To-do App</h1>
       <NewTodo addTodo={addTodo} />
-      <ul>
-        {
-        todos.map((todo, idx)=>{
-          return(<li key={idx}>{todo}</li>)
-        })
-        }
-      </ul>
+      <TodoList todos={todos}/>
     </>
   );
 };
